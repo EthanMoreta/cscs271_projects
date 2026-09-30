@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit a Recipe</title>
+</head>
+<body>
+
+    <h1>Submit a Recipe</h1>
+
+    <form action="index.html" method="get">
+
+        <label for="recipe-name">Recipe Name:</label><br>
+        <input type="text" id="recipe-name" name="recipe-name" required>
+        <br><br>
+
+        <label for="recipe-details">Ingredients and Instructions:</label><br>
+        <textarea id="recipe-details" name="recipe-details" rows="8" cols="40"></textarea>
+
+        <p>Difficulty Level:</p>
+
+        <input type="radio" id="easy" name="difficulty" value="Easy" required>
+        <label for="easy">Easy</label><br>
+
+        <input type="radio" id="medium" name="difficulty" value="Medium">
+        <label for="medium">Medium</label><br>
+
+        <input type="radio" id="hard" name="difficulty" value="Hard">
+        <label for="hard">Hard</label>
+
+
+        <p>Dietary Preferences:</p>
+
+        <input type="checkbox" id="vegetarian" name="dietary" value="Vegetarian">
+        <label for="vegetarian">Vegetarian</label><br>
+
+        <input type="checkbox" id="vegan" name="dietary" value="Vegan">
+        <label for="vegan">Vegan</label><br>
+
+        <input type="checkbox" id="gluten-free" name="dietary" value="Gluten-Free">
+        <label for="gluten-free">Gluten-Free</label><br>
+
+        <input type="checkbox" id="dairy-free" name="dietary" value="Dairy-Free">
+        <label for="dairy-free">Dairy-Free</label>
+
+        <br>
+
+        <input type="submit" value="Submit Recipe">
+
+    </form>
+
+    <p><a href="index.html">Back to Home</a></p>
+
+</body>
+</html>
