@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!-- 
+  Name: Ethan Moreta
+  Date: 10/04/26
+  Description: Dashboard page for MultiWatch, where a user will eventually 
+  see all of their shows across different streaming services.
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MultiWatch Dashboard</title>
+</head>
+
+<body>
+
+    <!-- Main heading for the page -->
+    <h1>My Dashboard</h1>
+
+    <img src="images/brand_logo.png" alt="logo image" width="300">
+
+    <!-- Intro paragraph explaining the purpose of this page -->
+    <p>
+        This is where you'll find every show you're currently tracking across all your streaming services, all in one place. 
+        The dashboard gives you an easy way to keep track of what you're watching, see which streaming service each show is 
+        on, and quickly check your progress. Instead of having to remember what you're watching on different platforms, MultiWatch 
+        brings everything together into one organized dashboard, making it easier to keep up with all your shows.
+    </p>
+
+    <img src="images/Multiwatch Streaming Hub Banners.png" alt="product image" width="1000">
+
+    <!-- 
+      add show controls will go here later 
+    -->
+    <h2>Add a Show</h2>
+    <form action="#" method="get">
+ 
+        <!-- Text input -->
+        <label for="show-title">Show Title:</label>
+        <input type="text" id="show-title" name="show-title" maxlength="50" required>
+        <br>
+        <br>
+ 
+        <!-- Dropdown for picking which streaming service the show is on -->
+        <label for="service">Streaming Service:</label>
+        <select id="service" name="service">
+            <option value="netflix">Netflix</option>
+            <option value="hulu">Hulu</option>
+            <option value="hbomax">HBO Max</option>
+            <option value="other">Other</option>
+        </select>
+        <br>
+        <br>
+ 
+        <input type="submit" value="Add Show">
+ 
+    </form>
+
+    <!-- 
+      * Table of shows will go here, as they add the show in the form above it will populate here
+      * Doesn't work yet just place holder
+    -->
+    <h2>My Shows</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Show Title</th>
+                <th>Streaming Service</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Stranger Things</td>
+                <td>Netflix</td>
+            </tr>
+            <tr>
+                <td>The Bear</td>
+                <td>Hulu</td>
+            </tr>
+            <tr>
+                <td>House of the Dragon</td>
+                <td>HBO Max</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <!-- Link back to the main page -->
+    <p>
+        <a href="mainpage.html">Back to Home</a>
+    </p>
+
+
+
+</body>
+
+</html>
