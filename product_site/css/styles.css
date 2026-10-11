@@ -1,0 +1,123 @@
+/*
+  Name: Ethan Moreta
+  Description: Single external stylesheet shared by every MultiWatch page
+  (mainpage.html, dashboard.html, discover.html).
+
+  *** Looked up how to get some of these styling to work on imgages and things like that in order for them to look good ***
+  *** Also looked up a cool way to add coloring and styling to my forms ***
+*/
+
+body {
+    background-color: #f4f6fb;     /* background color on every page */
+    font-family: Arial, Verdana, sans-serif;
+    max-width: 900px;              /* keeps text lines readable */
+    margin: 0 auto;                /* centers the page */
+    padding: 20px;
+}
+ 
+ 
+/* h1 = main title of each page, same font properties everywhere */
+h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 42px;
+    color: #2e2a7a;
+    text-align: center;
+}
+ 
+/* h2 = section headings */
+h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 28px;
+    color: #2e2a7a;
+}
+ 
+ 
+/* Same font, size, and color for every paragraph on the site.
+   Fallback fonts (Verdana, sans-serif) are included. */
+p {
+    font-family: Arial, Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333344;
+}
+ 
+ 
+/* Unvisited link */
+a:link {
+    color: #1f4fd1;
+    text-decoration: underline;
+}
+ 
+/* Visited link (different color so users can tell) */
+a:visited {
+    color: #7a3fb0;
+}
+ 
+/* Keeps big images from running off the screen */
+img {
+    max-width: 100%;
+    height: auto;
+}
+ 
+hr {
+    border: 0;
+    border-top: 2px solid #c2263a;
+    margin: 20px 0;
+}
+ 
+ 
+/* #logo - the logo image at the top of each page (unique per page) */
+#logo {
+    display: block;
+    margin: 0 auto 10px auto;
+}
+ 
+/* .banner - the wide product images */
+.banner {
+    display: block;
+    margin: 20px auto;
+    border: 3px solid #2e2a7a;
+}
+ 
+/* .nav-link - the navigation links near the top of the pages */
+.nav-link {
+    font-weight: bold;
+    margin-right: 15px;
+}
+ 
+/* .shows-table - the table on the dashboard*/
+.shows-table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #ffffff;
+}
+ 
+.shows-table th,
+.shows-table td {
+    border: 1px solid #333344;
+    padding: 8px;
+    font-family: Arial, Verdana, sans-serif;
+    color: #333344;
+}
+ 
+.shows-table th {
+    background-color: #2e2a7a;
+    color: #ffffff;
+}
+ 
+ 
+/* Forms (dashboard and discover pages) */
+label {
+    color: #333344;
+}
+ 
+fieldset {
+    border: 2px solid #2e2a7a;
+    margin-bottom: 15px;
+}
+ 
+legend {
+    color: #2e2a7a;
+    font-weight: bold;
+}
+ 

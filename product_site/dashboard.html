@@ -6,19 +6,28 @@
   see all of their shows across different streaming services.
 -->
 <html lang="en">
-
+ 
 <head>
     <meta charset="UTF-8">
-    <title>MultiWatch Dashboard</title>
+    <title>MultiWatch Personal Dashboard</title>
+    <!-- Link to the shared external stylesheet -->
+    <link href="css/styles.css" type="text/css" rel="stylesheet">
 </head>
-
+ 
 <body>
-
+ 
     <!-- Main heading for the page -->
     <h1>My Dashboard</h1>
-
-    <img src="images/brand_logo.png" alt="logo image" width="300">
-
+ 
+    <img id="logo" src="images/brand_logo.png" alt="logo image" width="300">
+ 
+    <!-- Link back to the main page -->
+        <!-- Added link to dashboard page -->
+    <hr>
+        <a class="nav-link" href="mainpage.html">Go to Dashboard</a>
+        <a class="nav-link" href="discover.html">Go to Discover Page</a>
+    <hr>
+ 
     <!-- Intro paragraph explaining the purpose of this page -->
     <p>
         This is where you'll find every show you're currently tracking across all your streaming services, all in one place. 
@@ -26,9 +35,9 @@
         on, and quickly check your progress. Instead of having to remember what you're watching on different platforms, MultiWatch 
         brings everything together into one organized dashboard, making it easier to keep up with all your shows.
     </p>
-
-    <img src="images/Multiwatch_Streaming_Hub_Banners.png" alt="product image" width="1000">
-
+ 
+    <img class="banner" src="images/Multiwatch_Streaming_Hub_Banners.png" alt="product image" width="1000">
+ 
     <!-- 
       add show controls will go here later 
     -->
@@ -55,45 +64,38 @@
         <input type="submit" value="Add Show">
  
     </form>
-
+ 
     <!-- 
       * Table of shows will go here, as they add the show in the form above it will populate here
       * Doesn't work yet just place holder
-      * looked up styling to add lines for the table
+      * Table borders and padding are now styled in css/styles.css (.shows-table)
     -->
     <h2>My Shows</h2>
-    <table style="border-collapse: collapse;">
+    <table class="shows-table">
         <thead>
             <tr>
-                <th style="border: 1px solid black; padding: 8px;">Show Title</th>
-                <th style="border: 1px solid black; padding: 8px;">Streaming Service</th>
+                <th>Show Title</th>
+                <th>Streaming Service</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td style="border: 1px solid black; padding: 8px;">Stranger Things</td>
-                <td style="border: 1px solid black; padding: 8px;">Netflix</td>
+                <td>Stranger Things</td>
+                <td>Netflix</td>
             </tr>
             <tr>
-                <td style="border: 1px solid black; padding: 8px;">The Bear</td>
-                <td style="border: 1px solid black; padding: 8px;">Hulu</td>
+                <td>The Bear</td>
+                <td>Hulu</td>
             </tr>
             <tr>
-                <td style="border: 1px solid black; padding: 8px;">House of the Dragon</td>
-                <td style="border: 1px solid black; padding: 8px;">HBO Max</td>
+                <td>House of the Dragon</td>
+                <td>HBO Max</td>
             </tr>
         </tbody>
     </table>
-
+ 
     <hr>
-
-    <!-- Link back to the main page -->
-    <p>
-        <a href="mainpage.html">Back to Home</a>
-    </p>
-
-
-
+ 
 </body>
-
+ 
 </html>

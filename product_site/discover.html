@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!-- 
+  Name: Ethan Moreta
+  Date: 10/11/26
+  Description: Discover page for MultiWatch, here users will be shown shows from a bunch of 
+  different streaming services. Unlike other streaming services which will only show shows/movies from their respective streaming site.
+
+  Status: right now just added the filtering of show/movies stil need to add actual movies and shows showing on this page.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MultiWatch Discovery Page</title>
+    <!-- Link to the shared external stylesheet -->
+    <link href="css/styles.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+ 
+    <!-- Main heading for the page -->
+    <h1>MultiWatch - Discovery Page</h1>
+    <img id="logo" src="images/brand_logo.png" alt="logo image" width="300">
+ 
+ 
+    <!-- Link back to the main page -->
+    <hr>
+        <a class="nav-link" href="mainpage.html">Go to Dashboard</a>
+        <a class="nav-link" href="dashboard.html">Go to Discover Page</a>
+    <hr>
+ 
+    <!-- Simple filter checklist -->
+    <!-- Since this is the dsicovery page I want to add a filter so you can disccover the types of show you want-->
+    <h2>Filter Options</h2>
+    <form>
+        <fieldset>
+            <legend>Type of Movie/Show</legend>
+            <label><input type="checkbox" name="genre" value="comedy"> Comedy</label><br>
+            <label><input type="checkbox" name="genre" value="romance"> Romance</label><br>
+            <label><input type="checkbox" name="genre" value="action"> Action</label><br>
+            <label><input type="checkbox" name="genre" value="drama"> Drama</label><br>
+            <label><input type="checkbox" name="genre" value="horror"> Horror</label>
+        </fieldset>
+ 
+        <fieldset>
+            <legend>Streaming Service</legend>
+            <label><input type="checkbox" name="service" value="netflix"> Netflix</label><br>
+            <label><input type="checkbox" name="service" value="hulu"> Hulu</label><br>
+            <label><input type="checkbox" name="service" value="disneyplus"> Disney+</label><br>
+            <label><input type="checkbox" name="service" value="amazonprime"> Amazon Prime</label><br>
+            <label><input type="checkbox" name="service" value="appletv"> Apple TV+</label>
+        </fieldset>
+        <button type="submit">Filter</button>
+    </form>
+ 
+</body>
+ 
+</html>
