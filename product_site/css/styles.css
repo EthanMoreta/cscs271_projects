@@ -7,8 +7,17 @@
   *** Also looked up a cool way to add coloring and styling to my forms ***
 */
 
+.header {
+    overflow: hidden;
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+    margin-right: 15px;
+    background-color: #ffffff;
+}
+
 body {
-    background-color: #f4f6fb;     /* background color on every page */
+    background-color: #799cf5;     /* background color on every page */
     font-family: Arial, Verdana, sans-serif;
     max-width: 900px;              /* keeps text lines readable */
     margin: 0 auto;                /* centers the page */
@@ -50,7 +59,7 @@ a:link {
  
 /* Visited link (different color so users can tell) */
 a:visited {
-    color: #7a3fb0;
+    color: #783db0;
 }
  
 /* Keeps big images from running off the screen */
@@ -65,7 +74,6 @@ hr {
     margin: 20px 0;
 }
  
- 
 /* #logo - the logo image at the top of each page (unique per page) */
 #logo {
     display: block;
@@ -79,11 +87,6 @@ hr {
     border: 3px solid #2e2a7a;
 }
  
-/* .nav-link - the navigation links near the top of the pages */
-.nav-link {
-    font-weight: bold;
-    margin-right: 15px;
-}
  
 /* .shows-table - the table on the dashboard*/
 .shows-table {
@@ -120,4 +123,12 @@ legend {
     color: #2e2a7a;
     font-weight: bold;
 }
+
+
  
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
