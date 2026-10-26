@@ -14,22 +14,29 @@
     <!-- Link to the shared external stylesheet -->
     <link href="css/styles.css" type="text/css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D4CML2E9E1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-D4CML2E9E1');
+    </script>
 </head>
-<body>
+
+<body class="page-discover">
  
-    <!-- Main heading for the page -->
-    <h1>MultiWatch - Discovery Page</h1>
-    <img id="logo" src="images/brand_logo.png" alt="logo image" width="300">
- 
- 
-    <!-- Link back to the main page -->
+    <!-- Header stays at the top of every page -->
     <div class="header">
-        <hr>
-            <a class="nav-link" href="mainpage.html">Main Page</a>
-            <a class="nav-link" href="dashboard.html">Dashboard</a>
-            <a class="nav-link" href="discover.html">Discover Page</a>
-        <hr>
+        <img class="header-logo" src="images/logo.png" alt="MultiWatch logo">
+        <h1>MultiWatch - Discovery Page</h1>
+        <a class="nav-link" href="mainpage.html">Main Page</a>
+        <a class="nav-link" href="dashboard.html">Dashboard</a>
+        <a class="nav-link active" href="discover.html">Discover Page</a>
     </div>
+ 
+    <img id="logo" src="images/brand_logo.png" alt="logo image" width="300">
  
     <!-- Simple filter checklist -->
     <!-- Since this is the dsicovery page I want to add a filter so you can disccover the types of show you want-->

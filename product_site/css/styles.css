@@ -1,36 +1,85 @@
 /*
   Name: Ethan Moreta
   Description: Single external stylesheet shared by every MultiWatch page
-  (mainpage.html, dashboard.html, discover.html).
+  (track-shows.html, watchlist.html, discover-shows.html).
 
   *** Looked up how to get some of these styling to work on imgages and things like that in order for them to look good ***
   *** Also looked up a cool way to add coloring and styling to my forms ***
 */
 
 .header {
-    overflow: hidden;
-    padding: 5px;
+    position: relative;
     text-align: center;
-    font-weight: bold;
-    margin-right: 15px;
+    margin: -16px -16px 20px -16px;
+}
+
+/* Small main-page logo in the top left of the heading bar */
+.header-logo {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 55px;
+    height: auto;
+    max-width: 55px;
+}
+
+/* White buttons for the page tabs */
+.nav-link {
+    display: inline-block;
     background-color: #ffffff;
+    color: #000000;
+    padding: 8px 16px;
+    margin: 8px 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* The tab you are currently on */
+.nav-link.active {
+    background-color:  #a22727;
+    color: #ffffff;
+}
+
+/* Keep nav buttons white even after visiting the link */
+.nav-link:link,
+.nav-link:visited {
+    color: #000000;
+}
+
+.nav-link.active:link,
+.nav-link.active:visited {
+    color: #ffffff;
 }
 
 body {
-    background-color: #799cf5;     /* background color on every page */
     font-family: Arial, Verdana, sans-serif;
-    max-width: 900px;              /* keeps text lines readable */
-    margin: 0 auto;                /* centers the page */
-    padding: 20px;
+    margin: 0;
+    padding: 16px;
+}
+
+/* Each tab uses its own page background so you can tell where you are */
+body.page-main {
+    background-color: #799cf5;
+}
+
+body.page-dashboard {
+    background-color: #7ec8a3;
+}
+
+body.page-discover {
+    background-color: #e8b86d;
 }
  
  
-/* h1 = main title of each page, same font properties everywhere */
+/* h1 = main title of each page, black bar just behind the heading */
 h1 {
     font-family: Georgia, "Times New Roman", serif;
     font-size: 42px;
-    color: #2e2a7a;
+    color: #ffffff;
+    background-color: #00ffbb;
     text-align: center;
+    padding: 15px 70px;
+    margin: 0;
 }
  
 /* h2 = section headings */
@@ -128,7 +177,7 @@ legend {
  
 
 @media only screen and (max-width: 600px) {
-  body {
-    background-color: lightblue;
+  h1 {
+    font-size: 28px;
   }
 }
