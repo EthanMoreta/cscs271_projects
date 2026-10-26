@@ -1,0 +1,53 @@
+Applying Feedback
+
+### Content & Audience
+
+**1. Did your peers clearly understand your site’s purpose and target audience?**
+
+Yes, my peers seemed to understand the purpose of my website, which is to help users keep track of shows they watch across different streaming platforms. They thought the content was clear and that the website was easy to navigate.
+
+**2. What suggestions did they make to improve your site’s content or messaging?**
+
+One suggestion was to remove the large image and shorten or remove the paragraph on the dashboard page. Since the home page already explains the website's purpose, having all that extra content on the dashboard is unnecessary.
+
+### Design & User Experience
+
+**3. How did your peers respond to your site’s design (layout, color, typography, or organization)?**
+
+My peers liked the overall organization of the website, but they suggested improving the color scheme because there isn't enough contrast between the text and background. They also mentioned reducing the empty space around the logo and navigation area.
+
+**4. Did they find the design effective in communicating your message and engaging users?**
+
+Overall, yes. They thought the website was organized and easy to navigate. However, they suggested making the navigation buttons more noticeable and reducing unnecessary content so users can focus on the important features.
+
+### Functionality & Performance
+
+**5. What issues did your peers identify with features or interactivity on your site?**
+
+My peers didn't mention any major functionality issues. However, one suggested changing the navigation links into buttons to make them easier to recognize and use.
+
+**6. Did they note any pages or elements that loaded slowly or inconsistently across devices or browsers?**
+
+No, none of my peers mentioned any issues with loading times or inconsistencies across different devices or browsers.
+
+### Accessibility & Usability
+
+**7. What feedback did you receive about accessibility (e.g., alt text, color contrast, keyboard navigation)?**
+
+The main accessibility issue mentioned was the lack of contrast between the text and background colors. Two of my peers pointed out that the light colors made some text difficult to read.
+
+**8. What can you improve to make your site more inclusive and user-friendly?**
+
+I can improve the color contrast to make the text easier to read. I can also make the navigation buttons more visible and reduce unnecessary content on the dashboard to make the website easier to use.
+
+### Action Plan
+
+**9. What did your peers like most about your site?**
+
+My peers liked how organized the website was and how easy it was to navigate. They also thought the content did a good job of explaining the website's purpose.
+
+**10. What two improvements will you make based on their feedback, and how will you implement them?**
+
+The first improvement I will make is changing the color scheme to create better contrast between the text and background. I will do this by adjusting the CSS colors to make everything easier to read.
+
+The second improvement will be cleaning up the dashboard page. I will remove the unnecessary image and paragraph, reduce the empty space around the header, and make the dashboard features more visible without having to scroll as much.
