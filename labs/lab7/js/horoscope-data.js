@@ -64,3 +64,5 @@ var emilioHoro = horoscopes[4];
 paras[3].innerHTML += `<br> My horoscope is ${devinHoro}`;
 paras[4].innerHTML += `<br> Devin's horoscope is ${ethanHoro}`;
 paras[5].innerHTML += `<br> Emilio's horoscope is ${emilioHoro}`;
+
+
