@@ -1,0 +1,53 @@
+# MultiWatch - JavaScript Script Design
+
+## 1. Script Idea
+
+I want to create a **Watch Progress Tracker** on the Dashboard page of MultiWatch. This feature will let users enter the name of a show, how many episodes they have watched, and the total number of episodes. JavaScript will calculate the percentage of the show they have completed and display the result on the page.
+
+This feature fits the purpose of MultiWatch because it helps users keep track of their shows across different streaming services. It also makes the Dashboard more interactive and useful.
+
+## 2. Goals
+
+The goal of this script is to make MultiWatch more interactive and help users keep track of their watching progress. Users will be able to enter their episode counts and see their completion percentage.
+
+The script will:
+- Use a string variable to store the show name.
+- Use numeric variables to store the number of episodes watched and the total number of episodes.
+- Use arithmetic to calculate the percentage completed.
+- Check that the entered information is valid.
+- Update the Dashboard to display the show name and progress.
+
+## 3. Task Breakdown
+
+1. Add input fields to the Dashboard for the show name, episodes watched, and total episodes.
+2. Create JavaScript variables to store the information entered by the user.
+3. Use a string for the show name and numbers for the episode counts.
+4. Check that the inputs are valid and that the total number of episodes is greater than zero.
+5. Calculate the progress percentage using this formula:
+
+   `progress = (episodesWatched / totalEpisodes) * 100`
+
+6. Update the page to display the show name, percentage completed, and episode counts.
+7. Display an error message if the user enters invalid information, such as a negative episode count or more episodes watched than the total.
+
+## 4. Flowchart
+
+The flowchart below shows the basic steps the script will follow.
+
+```mermaid
+flowchart TD
+    A([Start]) --> B[User enters show name and episode counts]
+    B --> C[JavaScript stores the input in variables]
+    C --> D{Is the input valid?}
+    D -- No --> E[Display an error message]
+    E --> B
+    D -- Yes --> F[Calculate watch progress percentage]
+    F --> G[Update the Dashboard with the results]
+    G --> H([End])
+```
+
+---
+
+**Planned location:** Dashboard page  
+**Feature:** Watch Progress Tracker  
+**Main JavaScript concepts:** Variables, strings, numbers, arithmetic operators, input validation, and updating HTML elements.
