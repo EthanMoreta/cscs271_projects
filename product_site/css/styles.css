@@ -27,11 +27,16 @@
 .nav-link {
     display: inline-block;
     background-color: #000e36;
-    color: #fdfcfc;
     padding: 8px 16px;
     margin: 8px 6px;
     text-decoration: none;
     font-weight: bold;
+}
+
+/* Keep navigation link colors separate from the site's general link styles. */
+.nav-link:link,
+.nav-link:visited {
+    color: #fdfcfc;
 }
 
 /* The tab you are currently on */
