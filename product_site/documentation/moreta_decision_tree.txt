@@ -1,0 +1,48 @@
+
+A. Decision Tree
+Decision Process: Updating Watch Progress in MultiWatch
+
+MultiWatch will use a decision process to determine how a show should be handled when a user interacts with it on their Dashboard. The process checks whether the show is already being tracked, whether the user has watched a new episode, and whether there are more episodes available.
+
+There are three decision nodes:
+
+Decision Node 1: Is the show already being tracked?
+- Yes: The show is already on the user's Dashboard, so the system moves on to check its watch progress.
+- No: The show is not currently being tracked, so the system adds it to the user's Dashboard. This allows users to keep all their shows organized in one place.
+Decision Node 2: Has the user marked a new episode as watched?
+- Yes: The system moves on to check whether there are more episodes available.
+- No: The system keeps the current watch progress without making any changes. This prevents the user's progress from being updated accidentally.
+Decision Node 3: Are there more episodes available?
+- Yes: The system updates the user's watch progress to the next episode. This helps users keep track of where they left off.
+- No: The system marks the show as completed because the user has finished all currently available episodes.
+The final decisions allow MultiWatch to either add a new show, keep existing progress, update progress to the next episode, or mark a show as completed.
+
+
+
+B. Flowchart
+
+
+                [User selects a show]
+                         |
+                         v
+          <Is the show already being tracked?>
+                    /          \
+                  No            Yes
+                  |              |
+                  v              v
+        (Add show to       <Has the user marked
+         Dashboard)         a new episode watched?>
+                              /          \
+                            No            Yes
+                            |              |
+                            v              v
+                   (Keep current      <Are more episodes
+                    watch progress)      available?>
+                                         /       \
+                                       Yes        No
+                                        |          |
+                                        v          v
+                                  (Update      (Mark show
+                                  progress      as completed)
+                                  to next
+                                  episode)
