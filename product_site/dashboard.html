@@ -102,7 +102,96 @@
             </tr>
         </tbody>
     </table>
-  
+
+    <!--
+      Watch Progress Tracker
+      User enters a show and episode counts. watch-progress.js calculates the percent finished.
+    -->
+    <h2>Watch Progress Tracker</h2>
+    <p>
+        Enter a show you are watching, how many episodes you have finished, and how many episodes
+        the show has. MultiWatch will tell you what percent of the show you have completed.
+    </p>
+
+    <div style="background-color: #ffffff; padding: 16px; margin: 10px 0 24px 0; max-width: 520px;">
+        <label for="progress-show">Show Name:</label>
+        <br>
+        <input type="text" id="progress-show" name="progress-show" maxlength="50">
+        <br>
+        <br>
+
+        <label for="episodes-watched">Episodes Watched:</label>
+        <br>
+        <input type="number" id="episodes-watched" name="episodes-watched" min="0">
+        <br>
+        <br>
+
+        <label for="total-episodes">Total Episodes:</label>
+        <br>
+        <input type="number" id="total-episodes" name="total-episodes" min="1">
+        <br>
+        <br>
+
+        <button type="button" id="check-progress">Check Progress</button>
+
+        <!-- Filled in by watch-progress.js -->
+        <div id="progress-bar-wrap" style="display: none; background-color: #d9d9e6; height: 22px; width: 100%; margin-top: 16px;">
+            <div id="progress-bar" style="background-color: #2e2a7a; height: 22px; width: 0;"></div>
+        </div>
+        <p id="progress-message" style="color: #333344;"></p>
+    </div>
+
+    <!--
+      Watch decision
+      Three yes-or-no questions. watch-decision.js follows the decision tree.
+    -->
+    <h2>Update Watch Progress</h2>
+    <p>
+        Pick a show and answer the three questions. MultiWatch will decide whether to add the show,
+        keep the current progress, move to the next episode, or mark the show as completed.
+    </p>
+
+    <div style="background-color: #ffffff; padding: 16px; margin: 10px 0 24px 0; max-width: 520px;">
+        <label for="decision-show">Show Name:</label>
+        <br>
+        <input type="text" id="decision-show" name="decision-show" maxlength="50">
+        <br>
+        <br>
+
+        <label for="already-tracked">Is the show already being tracked?</label>
+        <br>
+        <select id="already-tracked" name="already-tracked">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+        <br>
+        <br>
+
+        <label for="new-episode">Has a new episode been marked as watched?</label>
+        <br>
+        <select id="new-episode" name="new-episode">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+        <br>
+        <br>
+
+        <label for="more-episodes">Are there more episodes available?</label>
+        <br>
+        <select id="more-episodes" name="more-episodes">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+        <br>
+        <br>
+
+        <button type="button" id="check-decision">Update Progress</button>
+        <p id="decision-message" style="color: #333344;"></p>
+    </div>
+
+    <script src="js/watch-progress.js"></script>
+    <script src="js/watch-decision.js"></script>
+ 
 </body>
  
 </html>
