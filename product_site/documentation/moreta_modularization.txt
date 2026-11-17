@@ -1,0 +1,39 @@
+# Modularization Plan
+**Name:** Ethan Moreta
+
+### 1. Describe the specific code segments you plan to modularize into functions.
+
+I already have two functions in my JavaScript files called `checkDecision()` and `checkProgress()`. The `checkDecision()` function 
+checks the user's answers to the decision tree and displays what should happen to their show. The `checkProgress()` function checks 
+the show name and episode counts, calculates the percentage completed, and updates the progress bar.
+
+I plan to keep these functions but separate some of their calculations and checks into smaller helper functions.
+
+One function I plan to add is `calculateProgress(episodesWatched, totalEpisodes)`. It will take two 
+parameters, calculate the percentage of episodes watched, and return the rounded percentage.
+
+Another function I plan to add is `validateEpisodeCounts(episodesWatched, totalEpisodes)`. It will take two 
+parameters and return true or false depending on whether the episode counts are valid. This will help check that the user 
+enters valid numbers before calculating their progress.
+
+### 2. Discuss why you chose to convert these sections into functions.
+
+I chose these sections because they perform tasks that can be separated from the rest of the code. Having smaller 
+functions makes the JavaScript easier to read and understand. It also reduces repeated code because I can reuse the same 
+function whenever I need to calculate progress or check episode counts.
+
+This will also make debugging and updating the website easier. For example, if I want to change how progress is calculated, I can 
+update the `calculateProgress()` function instead of changing the calculation inside the main progress tracker. Overall, this keeps 
+the code more organized and easier to maintain.
+
+### 3. Propose any new functions that could enhance your site's features or improve user interaction.
+
+One new function I could add is `resetProgress()`. This function would clear the progress tracker inputs and reset the 
+progress bar when the user wants to enter information for another show. It would not need any parameters or return a value. This would 
+make the dashboard easier to use because users would not have to manually clear everything themselves.
+
+Another possible function is `calculateProgress(episodesWatched, totalEpisodes)`. This function would take the number 
+of watched episodes and total episodes as parameters and return the percentage completed. It fits into my website because users can 
+see how much of a show they have finished.
+
+These functions would help make MultiWatch easier to use while keeping the JavaScript organized and reusable.
