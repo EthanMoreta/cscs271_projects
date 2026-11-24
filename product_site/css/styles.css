@@ -1,54 +1,13 @@
 /*
   Name: Ethan Moreta
   Description: Single external stylesheet shared by every MultiWatch page
-  (track-shows.html, watchlist.html, discover-shows.html).
+  (mainpage.html, dashboard.html, discover.html).
 
   *** Looked up how to get some of these styling to work on imgages and things like that in order for them to look good ***
   *** Also looked up a cool way to add coloring and styling to my forms ***
 */
 
-.header {
-    position: relative;
-    text-align: center;
-    margin: -16px -16px 20px -16px;
-}
-
-/* Small main-page logo in the top left of the heading bar */
-.header-logo {
-    position: absolute;
-    top: 10px;
-    left: 8px;
-    width: 55px;
-    height: auto;
-    max-width: 55px;
-}
-
-/* White buttons for the page tabs */
-.nav-link {
-    display: inline-block;
-    background-color: #000e36;
-    padding: 8px 16px;
-    margin: 8px 6px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* Keep navigation link colors separate from the site's general link styles. */
-.nav-link:link,
-.nav-link:visited {
-    color: #fdfcfc;
-}
-
-/* The tab you are currently on */
-.nav-link.active {
-    background-color:  #ffffff;
-    color: #faf8f8;
-}
-
-.nav-link.active:link,
-.nav-link.active:visited {
-    color: #0a0909;
-}
+/* ===================== GENERAL PAGE ===================== */
 
 body {
     font-family: Arial, Verdana, sans-serif;
@@ -58,7 +17,7 @@ body {
     color: #333344;
 }
 
-/* Keep the pages light and simple with a soft gray background */
+/* Dark blue background shared by every page */
 body.page-main {
     background-color: #001a66;
 }
@@ -70,20 +29,82 @@ body.page-dashboard {
 body.page-discover {
     background-color: #001a66;
 }
- 
-ul {
-    color: #ffffff;
-} 
 
-ul li {
-    color: white;
+
+/* ===================== HEADER ===================== */
+
+/* Header bar at the top of every page */
+.header {
+    overflow: hidden;               /* contains the floated logo and links */
+    background-color: #000e36;
+    padding: 10px 16px;
+    margin: -16px -16px 20px -16px; /* cancels the body padding so the bar touches the edges */
 }
 
-form {
-    color: white;
+/* Small logo floated to the top left of the header */
+.header-logo {
+    float: left;
+    width: 55px;
+    height: auto;
+    max-width: 55px;
+    margin: 0 12px 0 0;
 }
 
-/* h1 = main title of each page, black bar just behind the heading */
+/* Navy tabs for the page links */
+.nav-link {
+    float: left;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    background-color: #13245e;      /* a bit lighter than the header so the tabs stand out */
+    padding: 10px 18px;
+    margin: 8px 6px 0 0;
+    text-decoration: none;
+}
+
+/* Keep navigation link colors separate from the site's general link styles */
+.nav-link:link,
+.nav-link:visited {
+    color: #fdfcfc;
+}
+
+/* Mouse hover effect */
+.nav-link:hover {
+    background-color: #2e2a7a;
+    color: #ffd166;
+}
+
+/* On click effect */
+.nav-link:active {
+    background-color: #ffd166;
+    color: #000e36;
+}
+
+/* The tab you are currently on (last so hover does not override it) */
+.nav-link.active,
+.nav-link.active:link,
+.nav-link.active:visited {
+    background-color: #ffffff;
+    color: #0a0909;
+}
+
+
+/* ===================== MAIN CONTENT ===================== */
+
+/* Content box that holds everything below the header */
+.content {
+    float: left;
+    width: 80%;
+    margin-left: 10%;               /* centers the box: (100% - 80%) / 2 */
+    background-color: #000e36;      /* solid background so text and images stand out */
+    padding: 20px 30px;
+    box-sizing: border-box;         /* keeps padding inside the 80% width */
+}
+
+
+/* ===================== TEXT ===================== */
+
+/* h1 = main title of each page */
 h1 {
     font-family: Georgia, "Times New Roman", serif;
     font-size: 42px;
@@ -93,14 +114,14 @@ h1 {
     padding: 15px 70px;
     margin: 0;
 }
- 
+
 /* h2 = section headings */
 h2 {
     font-family: Georgia, "Times New Roman", serif;
     font-size: 28px;
     color: #ffffff;
 }
- 
+
 /* Same font, size, and color for every paragraph on the site.
    Fallback fonts (Verdana, sans-serif) are included. */
 p {
@@ -109,52 +130,82 @@ p {
     line-height: 1.6;
     color: #ffffff;
 }
- 
- 
-/* Unvisited link */
+
+ul {
+    color: #ffffff;
+}
+
+ul li {
+    color: #ffffff;
+}
+
+
+/* ===================== LINKS ===================== */
+
+/* Unvisited link (light blue so it is readable on the dark background) */
 a:link {
-    color: #1f4fd1;
+    color: #7fb3ff;
     text-decoration: underline;
 }
- 
+
 /* Visited link (different color so users can tell) */
 a:visited {
-    color: #783db0;
+    color: #c9a7ff;
 }
- 
-/* Keeps big images from running off the screen */
+
+
+/* ===================== IMAGES & MEDIA ===================== */
+
+/* Images shrink to fit the page but never grow past their original size */
 img {
     max-width: 100%;
     height: auto;
 }
- 
-hr {
-    border: 0;
-    border-top: 2px solid #231d89;
-    margin: 20px 0;
-}
- 
+
 /* #logo - the logo image at the top of each page (unique per page) */
 #logo {
     display: block;
     margin: 0 auto 10px auto;
 }
- 
-/* .banner - the wide product images */
+
+/* .banner - the wide product images, centered with space around them */
 .banner {
     display: block;
     margin: 20px auto;
     border: 3px solid #2e2a7a;
 }
- 
- 
-/* .shows-table - the table on the dashboard*/
+
+/* Floating image helpers so text wraps around images */
+.img-left {
+    float: left;
+    margin: 0 15px 15px 0;
+}
+
+.img-right {
+    float: right;
+    margin: 0 0 15px 15px;
+}
+
+/* Keeps the video from running off small screens */
+iframe {
+    max-width: 100%;
+}
+
+hr {
+    border: 0;
+    border-top: 2px solid #231d89;
+    margin: 20px 0;
+}
+
+
+/* ===================== TABLE (dashboard) ===================== */
+
 .shows-table {
     border-collapse: collapse;
     width: 100%;
     background-color: #ffffff;
 }
- 
+
 .shows-table th,
 .shows-table td {
     border: 1px solid #333344;
@@ -162,33 +213,66 @@ hr {
     font-family: Arial, Verdana, sans-serif;
     color: #333344;
 }
- 
+
 .shows-table th {
     background-color: #2e2a7a;
     color: #ffffff;
 }
- 
- 
-/* Forms (dashboard and discover pages) */
-label {
-    color: #333344;
+
+
+/* ===================== FORMS (dashboard and discover) ===================== */
+
+form {
+    color: #ffffff;
 }
- 
+
+.form {
+    color: #ffffff;
+}
+
+/* Light label text so it is readable on the dark background */
+label {
+    color: #ffffff;
+}
+
 fieldset {
     border: 2px solid #2e2a7a;
     margin-bottom: 15px;
 }
- 
+
 legend {
-    color: #2e2a7a;
+    color: #ffd166;
     font-weight: bold;
 }
 
 
- 
+/* ===================== RESPONSIVE (600px and below) ===================== */
 
 @media only screen and (max-width: 600px) {
-  h1 {
-    font-size: 28px;
-  }
+
+    h1 {
+        font-size: 28px;
+        padding: 15px;
+    }
+
+    /* Stack the navigation links instead of floating them */
+    .nav-link {
+        float: none;
+        display: block;
+        text-align: left;
+        margin: 6px 0;
+    }
+
+    /* Content takes the full width with larger text */
+    .content {
+        width: 100%;
+        margin-left: 0;
+        font-size: 18px;
+    }
+
+    /* p and li set their own size, so raise them here too */
+    .content p,
+    .content li {
+        font-size: 18px;
+    }
 }
