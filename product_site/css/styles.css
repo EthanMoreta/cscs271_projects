@@ -35,6 +35,9 @@ body.page-discover {
 
 /* Header bar at the top of every page */
 .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;               /* contains the floated logo and links */
     background-color: #000e36;
     padding: 10px 16px;
@@ -70,13 +73,11 @@ body.page-discover {
 
 /* Mouse hover effect */
 .nav-link:hover {
-    background-color: #2e2a7a;
-    color: #ffd166;
+    background-color: #001a66;
 }
 
 /* On click effect */
 .nav-link:active {
-    background-color: #ffd166;
     color: #000e36;
 }
 
@@ -243,6 +244,41 @@ fieldset {
 legend {
     color: #ffd166;
     font-weight: bold;
+}
+
+
+/* White boxes for the dashboard tools */
+.tool-box {
+    background-color: #ffffff;
+    padding: 16px;
+    margin: 10px 0 24px 0;
+    max-width: 520px;
+}
+
+/* Dark labels so they are readable on the white boxes */
+.tool-box label {
+    color: #333344;
+}
+
+/* Feedback messages set by JavaScript.
+   min-height saves space so the page does not jump when text appears. */
+#title-message,
+#form-message,
+#filter-message {
+    min-height: 1.6em;
+    margin: 6px 0;
+}
+
+.hint-message {
+    color: #ffd166;
+}
+
+.error-message {
+    color: #ff9a9a;
+}
+
+.success-message {
+    color: #8ff0a4;
 }
 
 

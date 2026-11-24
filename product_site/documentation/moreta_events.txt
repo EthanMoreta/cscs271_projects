@@ -1,0 +1,13 @@
+MultiWatch - Event Handling
+Name: Ethan Moreta
+
+
+A. Describe Your Event
+
+I plan to add a filter to the My Shows table on the MultiWatch Dashboard. The element the user will interact with is a dropdown menu that lists each streaming service. When the user picks a different option, a change event fires and triggers a function called onServiceChange(). The function goes through each row in the table and compares its streaming service to the one the user picked. Rows that match stay visible and all other rows are hidden. If the user picks "All Services," every row is shown. A message then displays how many shows are visible, or tells the user to try another service if no shows were found.
+
+
+B. Event Handling Flowchart
+
+The color version of this flowchart is in moreta_events_flowchart.png.
+

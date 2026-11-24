@@ -51,13 +51,14 @@
       add show controls will go here later 
     -->
     <h2>Add a Show</h2>
-    <form action="#" method="get">
+    <!-- novalidate lets add-show-form.js show its own error messages -->
+    <form id="add-show-form" action="#" method="get" novalidate>
  
         <!-- Text input -->
         <label for="show-title">Show Title:</label>
         <input type="text" id="show-title" name="show-title" maxlength="50" required>
-        <br>
-        <br>
+        <!-- Filled in by add-show-form.js -->
+        <p id="title-message" aria-live="polite"></p>
  
         <!-- Dropdown for picking which streaming service the show is on -->
         <label for="service">Streaming Service:</label>
@@ -71,15 +72,25 @@
         <br>
  
         <input type="submit" value="Add Show">
+        <p id="form-message" aria-live="polite"></p>
  
     </form>
  
     <!-- 
-      * Table of shows will go here, as they add the show in the form above it will populate here
-      * Doesn't work yet just place holder
-      * Table borders and padding are now styled in css/styles.css (.shows-table)
+      * Shows added in the form above appear here (add-show-form.js)
+      * Table borders and padding are styled in css/styles.css (.shows-table)
     -->
     <h2>My Shows</h2>
+    <!-- Changing this dropdown runs show-filter.js -->
+    <label for="service-filter">Show only:</label>
+    <select id="service-filter" name="service-filter">
+        <option value="All">All Services</option>
+        <option value="Netflix">Netflix</option>
+        <option value="Hulu">Hulu</option>
+        <option value="HBO Max">HBO Max</option>
+        <option value="Other">Other</option>
+    </select>
+    <p id="filter-message" aria-live="polite"></p>
     <table class="shows-table">
         <thead>
             <tr>
@@ -113,7 +124,7 @@
         the show has. MultiWatch will tell you what percent of the show you have completed.
     </p>
 
-    <div style="background-color: #ffffff; padding: 16px; margin: 10px 0 24px 0; max-width: 520px;">
+    <div class="tool-box">
         <label for="progress-show">Show Name:</label>
         <br>
         <input type="text" id="progress-show" name="progress-show" maxlength="50">
@@ -151,7 +162,7 @@
         keep the current progress, move to the next episode, or mark the show as completed.
     </p>
 
-    <div style="background-color: #ffffff; padding: 16px; margin: 10px 0 24px 0; max-width: 520px;">
+    <div class="tool-box">
         <label for="decision-show">Show Name:</label>
         <br>
         <input type="text" id="decision-show" name="decision-show" maxlength="50">
@@ -191,6 +202,8 @@
 
     <script src="js/watch-progress.js"></script>
     <script src="js/watch-decision.js"></script>
+    <script src="js/show-filter.js"></script>
+    <script src="js/add-show-form.js"></script>
  
 </body>
  
